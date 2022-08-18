@@ -630,12 +630,11 @@ footer ul li {
 
 /* animacion */
 
-/* .secUno { 
+.secUno { 
   transition: all 1.5s;
 }
 
 .secUno:hover {
   height: 450px;
   width: 320px;
-
-} */
+} 
