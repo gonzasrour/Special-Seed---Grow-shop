@@ -1,0 +1,641 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  background-color: #e8e9eb;
+}
+
+/* header */
+
+.encabezado {
+  background-image: url("../img/fondo 2.jpg");
+  background-position: center;
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  opacity: 80%;
+  grid-area: header;
+}
+
+.encabezado div {
+  height: 10rem;
+  width: 50rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 4px 3px #41463d;
+}
+
+/* nav */
+
+nav {
+  background-color: #b8cdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  grid-area: nav;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 2rem;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+/* info principal */
+
+section {
+  margin: 1rem;
+  padding: 2rem;
+  -webkit-box-shadow: inset 0px 0px 0px 6px rgba(184, 205, 248, 1);
+-moz-box-shadow: inset 0px 0px 0px 6px rgba(184, 205, 248, 1);
+box-shadow: inset 0px 0px 0px 6px rgba(184, 205, 248, 1);
+  /* 
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0); */
+  height: 50rem;
+  /* lo ACOMUDO CON FLEX */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+section img {
+  width: 10rem;
+  border-radius: 4px;
+}
+
+section button {
+  border-radius: 5px;
+  background-color: #b8cdf8;
+  width: 10rem;
+  height: 3rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  /* -webkit-box-shadow: inset -1px 3px 8px 5px #1f87ff, 2px 5px 16px 0px #0b325e,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: inset -1px 3px 8px 5px #1f87ff, 2px 5px 16px 0px #0b325e,
+    5px 5px 15px 5px rgba(0, 0, 0, 0); */
+    -webkit-box-shadow: inset 0px 0px 0px 6px rgba(184, 205, 248, 1);
+-moz-box-shadow: inset 0px 0px 0px 6px rgba(184, 205, 248, 1);
+box-shadow: inset 0px 0px 0px 6px rgba(184, 205, 248, 1);
+}
+.divInd h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.divInd p {
+  color: black;
+  margin: 5px 5px 5px 5px;
+  padding: 20px;
+  border: 3.5px #b8cdf8 solid;
+}
+
+/* footer */
+
+footer {
+  padding-top: 2rem;
+  background-color: #b8cdf8;
+  text-align: center;
+  grid-area: footer;
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 2rem;
+}
+
+/* trabajamos grid */
+
+.casaA {
+  grid-area: casaA;
+}
+.casaB {
+  grid-area: casaB;
+}
+.casaC {
+  grid-area: casaC;
+}
+.casaD {
+  grid-area: casaD;
+}
+.info {
+  grid-area: info;
+}
+
+.gridPadre {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "info info info info"
+    "ofertaDia ofertaDia ofertaDia ofertaDia"
+    "casaA casaB casaC casaD"
+    "footer footer footer footer";
+}
+
+/* titulo de oferta */
+
+.ofertaDia {
+  text-align: center;
+  grid-area: ofertaDia;
+}
+
+/* tableta */
+
+@media (min-width: 700px) and (max-width: 1100px) {
+  .gridPadre {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "info info"
+      "ofertaDia ofertaDia"
+      "casaA casaB"
+      "casaC casaD"
+      "footer footer";
+  }
+  section {
+    text-align: center;
+  }
+  section img {
+    width: 100px;
+  }
+}
+
+/* vista movil */
+
+@media (max-width: 699px) {
+  .gridPadre {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "info"
+      "ofertaDia"
+      "casaA"
+      "casaB"
+      "casaC"
+      "casaD"
+      "footer";
+  }
+
+  html {
+    font-size: 80%;
+  }
+
+  nav {
+    position: static;
+  }
+
+  .encabezado div {
+    max-width: 90%;
+  }
+
+  section {
+    text-align: center;
+  }
+  section img {
+    width: 200px;
+  }
+}
+
+/* Grid Productos */
+
+.tituloP {
+  grid-area: tituloP;
+}
+.semilaA {
+  grid-area: semillaA;
+}
+.semilaB {
+  grid-area: semillaB;
+}
+.semilaC {
+  grid-area: semillaC;
+}
+.semilaD {
+  grid-area: semillaD;
+}
+.semilaE {
+  grid-area: semillaE;
+}
+.semilaF {
+  grid-area: semillaF;
+}
+.gridProductos {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "tituloP tituloP tituloP tituloP"
+    "semillaA semillaA semillaB semillaB"
+    "semillaC semillaC semillaD semillaD"
+    "semillaE semillaE semillaF semillaF"
+    "footer footer footer footer";
+}
+
+.divP {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: lighter;
+  text-transform: none;
+  color: black;
+}
+
+.divT h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.divT h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.divT p {
+  color: black;
+  margin: 10px 10px 10px 10px;
+  padding: 20px;
+  border: 3.5px #b8cdf8 solid;
+}
+
+.ppp {
+  margin-bottom: 2rem;
+}
+
+.ddd {
+  margin-bottom: 2rem;
+}
+
+.imgp {
+  margin-bottom: 2rem;
+}
+/* Grid tablet producto */
+@media (min-width: 768px) and (max-width: 1100px) {
+  .gridProductos {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "tituloP tituloP"
+      "semillaA semillaB"
+      "semillaC semillaD"
+      "semillaE semillaF"
+      "footer footer";
+  }
+  section {
+    text-align: center;
+  }
+  section img {
+    width: 100px;
+  }
+}
+
+/* grid movil producto */
+
+@media (max-width: 767px) {
+  .gridProductos {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "tituloP"
+      "semillaA"
+      "semillaB"
+      "semillaC"
+      "semillaD"
+      "semillaE"
+      "semillaF"
+      "footer";
+  }
+
+  html {
+    font-size: 80%;
+  }
+
+  nav {
+    position: static;
+  }
+
+  .encabezado div {
+    max-width: 90%;
+  }
+
+  section {
+    text-align: center;
+  }
+  section img {
+    width: 200px;
+  }
+}
+
+/* Cultivo  */
+
+.sectionCultivo {
+  margin: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.divCul h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.divCul h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.divCul strong {
+  text-align: center;
+  margin-bottom: 10rem;
+}
+.divCul p {
+  text-align: center;
+  color: black;
+  margin: 2px 2px 2px 2px;
+  padding: 10px;
+  border: 2px #b8cdf8 solid;
+}
+
+.mainCul {
+  background-position: center;
+}
+
+.selectionCultivo {
+  grid-area: selectionCultivo;
+}
+.cultivoVid {
+  grid-area: cultivoVid;
+}
+.cultivoVid h2 {
+  text-align: center;
+}
+
+.gridCultivo {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "selectionCultivo"
+    "cultivoVid"
+    "footer";
+}
+
+/* Grid tablet cultivo */
+@media (min-width: 768px) and (max-width: 1100px) {
+  .gridCultivo {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "selectionCultivo"
+      "cultivoVid"
+      "footer";
+  }
+  section {
+    text-align: center;
+    tab-size: auto;
+  }
+  section img {
+    width: 100px;
+  }
+}
+
+/* grid movil cultivo */
+
+@media (max-width: 767px) {
+  .gridCultivo {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "selectionCultivo"
+      "cultivoVid"
+      "footer";
+  }
+
+  html {
+    font-size: 80%;
+  }
+
+  nav {
+    position: static;
+  }
+
+  .encabezado div {
+    max-width: 90%;
+  }
+
+  section {
+    text-align: center;
+  }
+  section img {
+    width: 200px;
+  }
+}
+
+/* Estilo a Ubicacion */
+.classUbi h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.classUbi p {
+  color: black;
+  margin: 10px 10px 10px 10px;
+  padding: 20px;
+  border: 3.5px #b8cdf8 solid;
+}
+
+.ubi {
+  grid-area: ubi;
+}
+
+.mapaEs {
+  grid-area: mapaEs;
+}
+
+.gridUbicacion {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "div"
+    "mapaEs"
+    "footer";
+}
+
+/* * Grid tablet ubicacion */
+@media (min-width: 768px) and (max-width: 1100px) {
+  .gridUbicacion {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "div"
+      "mapaEs"
+      "footer";
+  }
+  section {
+    text-align: center;
+    tab-size: auto;
+  }
+  section iframe {
+    width: auto;
+  }
+}
+/* grid movil ubicacion */
+
+@media (max-width: 767px) {
+  .gridUbicacion {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "div"
+      "mapaEs"
+      "footer";
+  }
+
+  html {
+    font-size: 80%;
+  }
+
+  nav {
+    position: static;
+  }
+
+  .encabezado div {
+    max-width: 90%;
+  }
+
+  section {
+    text-align: center;
+  }
+  section iframe {
+    width: auto;
+  }
+}
+
+/* Contactos */
+
+.divCon {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contacto {
+  grid-area: contacto;
+}
+
+.gridContacto {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "div"
+    "contacto"
+    "footer";
+}
+
+/* * Grid tablet contacto */
+@media (min-width: 768px) and (max-width: 1100px) {
+  .gridContacto {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "div"
+      "contacto"
+      "footer";
+  }
+  section {
+    text-align: justify;
+    tab-size: 2rem;
+  }
+  section form {
+    width: auto;
+  }
+}
+
+/* grid movil contacto */
+
+@media (max-width: 767px) {
+  .gridContacto {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "div"
+      "contacto"
+      "footer";
+  }
+
+  html {
+    font-size: 80%;
+  }
+
+  nav {
+    position: static;
+  }
+
+  .encabezado div {
+    max-width: 90%;
+  }
+
+  section {
+    text-align: justify;
+  }
+  section iframe {
+    width: auto;
+  }
+}
+
+
+
+/* animacion */
+
+.secUno { 
+  transition: all 1.5s;
+}
+
+.secUno:hover {
+  height: 450px;
+  width: 320px;
+
+}
