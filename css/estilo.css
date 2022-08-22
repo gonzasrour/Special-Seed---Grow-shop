@@ -17,7 +17,7 @@ body {
 /* header */
 
 .encabezado {
-  background-image: url("../img/fondo 2.jpg");
+  background-image: url("../img/fondo\ 2.jpg");
   background-position: center;
   height: 50vh;
   width: 100%;
