@@ -638,3 +638,16 @@ footer ul li {
   height: 450px;
   width: 320px;
 } 
+
+/* boostrap */
+
+.divnav  { 
+  background-color: #b8cdf8  !important;
+  display: flex ;
+  align-items: center ;
+  justify-content: center ;
+  position: sticky;
+  top: 0;
+  grid-area: nav;
+
+}
