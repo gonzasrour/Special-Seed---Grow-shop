@@ -651,3 +651,9 @@ footer ul li {
   grid-area: nav;
 
 }
+
+.imgcarrusel {
+  height: 350px;
+  object-fit: cover;
+}
+
