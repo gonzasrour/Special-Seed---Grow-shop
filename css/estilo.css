@@ -251,6 +251,12 @@ footer ul li {
 .semilaF {
   grid-area: semillaF;
 }
+.semilaG {
+  grid-area: semillaG;
+}
+.semilaH {
+  grid-area: semillaH;
+}
 .gridProductos {
   display: grid;
   grid-template-areas:
@@ -260,6 +266,7 @@ footer ul li {
     "semillaA semillaA semillaB semillaB"
     "semillaC semillaC semillaD semillaD"
     "semillaE semillaE semillaF semillaF"
+    "semillaG semillaG semillaH semillaH"
     "footer footer footer footer";
 }
 
@@ -310,6 +317,7 @@ footer ul li {
       "semillaA semillaB"
       "semillaC semillaD"
       "semillaE semillaF"
+      "semillaG semillaH"
       "footer footer";
   }
   section {
@@ -335,6 +343,8 @@ footer ul li {
       "semillaD"
       "semillaE"
       "semillaF"
+      "semillaG"
+      "semillaH"
       "footer";
   }
 
@@ -657,3 +667,10 @@ footer ul li {
   object-fit: cover;
 }
 
+
+
+.colorBtn {
+  background-color: #b8cdf8;
+  color: white;
+  font-size: 1.5rem;
+}
